@@ -2,6 +2,7 @@ package com.yangk.mystudy.ctmds;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @Description TODO
@@ -11,7 +12,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class ExportDTO {
+public class ExportDTO implements Comparable<ExportDTO>{
 
     /**
      省份
@@ -48,5 +49,14 @@ public class ExportDTO {
      */
     private String recordStatus;
 
+    /**
+     详情
+     */
+    private String detail;
 
+
+    @Override
+    public int compareTo(ExportDTO o) {
+        return areaName.compareTo(StringUtils.isBlank(o.getAreaName())?"":o.getAreaName());
+    }
 }
