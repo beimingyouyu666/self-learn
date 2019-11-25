@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yangk</groupId>
-    <artifactId>mystudy</artifactId>
+    <artifactId>self-learn</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>mystudy</name>
+    <name>self-learn</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>

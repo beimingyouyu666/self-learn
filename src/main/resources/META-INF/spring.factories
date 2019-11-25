@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.yangk.mystudy.autoconfig.AutoConfigTest
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.yangk.selflearn.autoconfig.AutoConfigTest
