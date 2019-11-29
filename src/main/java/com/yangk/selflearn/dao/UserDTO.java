@@ -1,55 +1,53 @@
 package com.yangk.selflearn.dao;
 
-
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Table(name = "`user`")
+/**
+ * @Description TODO
+ * @Author yangkun
+ * @Date 2019/11/29
+ * @Version 1.0
+ * @blame yangkun
+ */
 @Data
-public class User{
+public class UserDTO  implements Comparable<UserDTO>{
+
     /**
      * 主键
      */
-    @Id
-    @Column(name = "`id`")
-    @GeneratedValue(generator = "JDBC")
     private Integer id;
 
     /**
      * 年龄
      */
-    @Column(name = "`age`")
     private Integer age;
 
     /**
      * 密码
      */
-    @Column(name = "`password`")
     private String password;
 
     /**
      * 性别
      */
-    @Column(name = "`sex`")
     private Integer sex;
 
     /**
      * 用户名
      */
-    @Column(name = "`username`")
     private String username;
 
-    public User(Integer id,Integer age, String password) {
+    public UserDTO(Integer id, Integer age, String password) {
         this.id = id;
         this.age = age;
         this.password = password;
     }
 
-    public User() {
+    public UserDTO() {
     }
 
+    @Override
+    public int compareTo(UserDTO userDTO) {
+        return this.age.compareTo(userDTO.getAge());
+    }
 }

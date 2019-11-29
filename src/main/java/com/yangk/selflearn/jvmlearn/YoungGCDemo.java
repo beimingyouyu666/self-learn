@@ -3,6 +3,10 @@ package com.yangk.selflearn.jvmlearn;
 /**
  * @Description 模拟触发young gc
  *
+ * jvm参数
+ * “-XX:NewSize=5242880 -XX:MaxNewSize=5242880 -XX:InitialHeapSize=10485760 -XX:MaxHeapSize=10485760 -XX:SurvivorRatio=8
+ *  -XX:PretenureSizeThreshold=10485760 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:gc.log”
+ *
     -- 原始日志
     Java HotSpot(TM) 64-Bit Server VM (25.211-b12) for windows-amd64 JRE (1.8.0_211-b12), built on Apr  1 2019 20:53:26 by "java_re" with MS VC++ 10.0 (VS2010)
     Memory: 4k page, physical 16687976k(4429252k free), swap 33374052k(19554568k free)
@@ -48,6 +52,8 @@ package com.yangk.selflearn.jvmlearn;
     4、[Times: user=0.01 sys=0.00, real=0.01 secs]
     指此次gc所花费的时间
 
+    mvn clean package -Dmaven.test.skip=true -U
+
  * @Author yangkun
  * @Date 2019/11/25
  * @Version 1.0
@@ -56,13 +62,12 @@ package com.yangk.selflearn.jvmlearn;
 public class YoungGCDemo {
 
     public static void main(String[] args) {
-
         byte[] array1 = new byte[1024*1024];
         array1 = new byte[1024*1024];
         array1 = new byte[1024*1024];
         array1 = null;
 
         byte[] array2 = new byte[1024*1024];
-
     }
+
 }
