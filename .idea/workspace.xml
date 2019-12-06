@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b756761d-1e0f-403a-a1a5-fbc056c7979f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/日志备份/oldgc.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gc-explain.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gc.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/dao/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/dao/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/YoungGCDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oldgc.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/controller/HelloController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +16,23 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/self_learn$OptimizeOldGC.ic" NAME="OptimizeOldGC Coverage Results" MODIFIED="1575271364555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1876045403">
@@ -51,19 +66,22 @@
     <session id="-1015670913">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.76" value="1" />
+          <entry key="project.open.time.94" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="2" />
           <entry key="factories" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="46" />
-          <entry key="log" value="18" />
+          <entry key="java" value="58" />
+          <entry key="log" value="22" />
           <entry key="name" value="1" />
           <entry key="pom" value="1" />
           <entry key="properties" value="1" />
@@ -72,9 +90,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="2" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="46" />
-          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="JAVA" value="58" />
+          <entry key="PLAIN_TEXT" value="24" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="8" />
           <entry key="spring.factories" value="1" />
@@ -83,8 +102,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="10" />
-          <entry key="java" value="2984" />
-          <entry key="log" value="469" />
+          <entry key="java" value="3757" />
+          <entry key="log" value="500" />
           <entry key="name" value="10" />
           <entry key="properties" value="24" />
           <entry key="xml" value="10" />
@@ -92,8 +111,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2984" />
-          <entry key="PLAIN_TEXT" value="489" />
+          <entry key="JAVA" value="3757" />
+          <entry key="PLAIN_TEXT" value="520" />
           <entry key="Properties" value="24" />
           <entry key="XML" value="10" />
         </counts>
@@ -102,56 +121,130 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/OptimizeYoungGC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/OptimizeOldGC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/日志备份/OptimizeYoungGCRecord.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/日志备份/OptimizeOldGC.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1782">
+              <caret line="66" column="137" selection-start-line="66" selection-start-column="137" selection-end-line="66" selection-end-column="137" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/autoconfig/AutoBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#337#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/autoconfig/AutoConfigTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/frontinterceptor/ValidaConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/frontinterceptor/ValidaInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="783">
+              <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/controller/HelloController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/fpx-repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar!/org/apache/commons/lang3/StringUtils.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1620">
+              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/fpx-repository/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="40" column="73" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/fpx-repository/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2025">
+              <caret line="102" column="32" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/YoungGCDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="64" column="44" lean-forward="true" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/collection/CollectionHandleUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/dao/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1023">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/dao/UserDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-              <folding>
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/Comparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="463" column="74" selection-start-line="463" selection-start-column="69" selection-end-line="463" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/List.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="475" column="17" selection-start-line="475" selection-start-column="17" selection-end-line="475" selection-end-column="17" />
+            <state relative-caret-position="243">
+              <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -192,7 +285,6 @@
         <option value="$PROJECT_DIR$/gc-explain.log" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/SelfLearnApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/YoungGCDemo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/YoungGCDemoToOld.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/YoungGCDemoObjectToOld.java" />
@@ -206,6 +298,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/dao/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/dao/UserDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/collection/CollectionHandleUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/OptimizeYoungGC.java" />
+        <option value="$PROJECT_DIR$/日志备份/OptimizeYoungGCRecord.log" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/OptimizeOldGC.java" />
+        <option value="$PROJECT_DIR$/日志备份/OptimizeOldGC.log" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/frontinterceptor/ValidaInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/frontinterceptor/ValidaConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/YoungGCDemo.java" />
       </list>
     </option>
   </component>
@@ -252,9 +352,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="624" />
-    <option name="y" value="28" />
-    <option name="width" value="1286" />
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
     <option name="height" value="970" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -288,6 +388,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -349,7 +451,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="yangk" type="462c0819:PsiDirectoryNode" />
               <item name="selflearn" type="462c0819:PsiDirectoryNode" />
-              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-learn" type="b2602c69:ProjectViewProjectNode" />
@@ -360,7 +462,18 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="yangk" type="462c0819:PsiDirectoryNode" />
               <item name="selflearn" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="frontinterceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="yangk" type="462c0819:PsiDirectoryNode" />
+              <item name="selflearn" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmlearn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-learn" type="b2602c69:ProjectViewProjectNode" />
@@ -371,18 +484,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575007427819" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575594889986" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../learn-jvm" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -392,6 +504,9 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\code-self\self-learn\src\main\java\com\yangk\selflearn\frontinterceptor" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.yangk.selflearn.jvmlearn" />
     </key>
@@ -411,7 +526,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.YoungGCDemo">
     <configuration name="BigObjectToOld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yangk.selflearn.jvmlearn.BigObjectToOld" />
       <module name="self-learn" />
@@ -453,10 +568,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OptimizeOldGC" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.yangk.selflearn.jvmlearn.OptimizeOldGC" />
+      <module name="self-learn" />
+      <option name="VM_PARAMETERS" value="-XX:NewSize=209715200 -XX:MaxNewSize=209715200 -XX:InitialHeapSize=314572800 -XX:MaxHeapSize=314572800 -XX:SurvivorRatio=2 -XX:MaxTenuringThreshold=15 -XX:PretenureSizeThreshold=20971520 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:oldgc.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OptimizeYoungGC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yangk.selflearn.jvmlearn.OptimizeYoungGC" />
+      <module name="self-learn" />
+      <option name="VM_PARAMETERS" value="-XX:NewSize=104857600 -XX:MaxNewSize=104857600 -XX:InitialHeapSize=209715200 -XX:MaxHeapSize=209715200 -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=15 -XX:PretenureSizeThreshold=3145728 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:opyounggc.log" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yangk.selflearn.jvmlearn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="YoungGCDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yangk.selflearn.jvmlearn.YoungGCDemo" />
       <module name="self-learn" />
-      <option name="VM_PARAMETERS" value="-XX:NewSize=5242880 -XX:MaxNewSize=5242880 -XX:InitialHeapSize=10485760 -XX:MaxHeapSize=10485760 -XX:SurvivorRatio=8 -XX:PretenureSizeThreshold=10485760 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:gc.log" />
+      <option name="VM_PARAMETERS" value="-XX:NewSize=5242880 -XX:MaxNewSize=5242880 -XX:InitialHeapSize=10485760 -XX:MaxHeapSize=10485760 -XX:SurvivorRatio=8 -XX:PretenureSizeThreshold=10485760 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:gc.log -XX:+TraceClassLoading -XX:+TraceClassUnloading" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.yangk.selflearn.jvmlearn.*" />
@@ -478,6 +615,7 @@
     <configuration name="SelfLearnApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="self-learn" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangk.selflearn.SelfLearnApplication" />
+      <option name="VM_PARAMETERS" value="-Xms4096M -Xmx4096M -Xss1M -XX:PermSize=256M -XX:MaxPermSize=256M -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=92 -XX:+UseCMSCompactAtFullCollection -XX:CMSFullGCsBeforeCompaction=0 -XX:+CMSParallelInitialMarkEnabled -XX:+CMSScavengeBeforeRemark " />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -485,16 +623,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.YoungGCDemoToOld" />
+      <item itemvalue="Application.OptimizeOldGC" />
       <item itemvalue="Spring Boot.SelfLearnApplication" />
       <item itemvalue="Application.YoungGCDemo" />
       <item itemvalue="Application.BigObjectToOld" />
       <item itemvalue="Application.OldGCDemo" />
       <item itemvalue="Application.CollectionHandleUtil" />
+      <item itemvalue="Application.OptimizeYoungGC" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CollectionHandleUtil" />
         <item itemvalue="Application.YoungGCDemo" />
+        <item itemvalue="Application.OptimizeYoungGC" />
+        <item itemvalue="Application.CollectionHandleUtil" />
         <item itemvalue="Application.OldGCDemo" />
         <item itemvalue="Application.BigObjectToOld" />
       </list>
@@ -520,18 +661,18 @@
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27252626" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25594252" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Alibaba Cloud Explorer" order="7" />
+      <window_info id="Alibaba Cloud Explorer" order="7" weight="0.32946378" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32942432" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36780384" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46055436" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978677" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -556,11 +697,12 @@
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32946378" />
       <window_info anchor="right" id="Alibaba Function Compute" order="7" weight="0.32946378" />
       <window_info anchor="right" id="aiXcoder" order="8" side_tool="true" />
-      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Database" order="9" weight="0.32946378" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
       <window_info anchor="right" id="Alibaba Log Console" order="12" />
       <window_info anchor="right" id="Bean Validation" order="13" />
+      <window_info anchor="right" id="Coverage" order="14" side_tool="true" weight="0.32946378" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,90 +724,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/controller/HelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/springaop/AopAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yangk/selflearn/SelfLearnApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yangk/selflearn/transactional/TransactionalDemoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/.name">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/self-learn.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-explain.log" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/SelfLearnApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/fpx-repository/org/springframework/boot/spring-boot-starter-parent/2.0.5.RELEASE/spring-boot-starter-parent-2.0.5.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2224">
-          <caret line="232" column="47" selection-start-line="232" selection-start-column="47" selection-end-line="232" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -698,20 +756,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="e#2067#2068#0" expanded="true" />
-            <element signature="e#2120#2121#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
         </state>
       </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -825,9 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oldgc.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/日志备份/biggc.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -849,13 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/YoungGCDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/日志备份/gc.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -867,9 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -902,10 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding>
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,15 +967,120 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/idempotent/Md5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/日志备份/oldgc.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://D:/fpx-repository/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/OptimizeYoungGC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/日志备份/OptimizeYoungGCRecord.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/日志备份/OptimizeOldGC.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="66" column="137" selection-start-line="66" selection-start-column="137" selection-end-line="66" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/autoconfig/AutoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/autoconfig/AutoConfigTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/frontinterceptor/ValidaConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/frontinterceptor/ValidaInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/fpx-repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar!/org/apache/commons/lang3/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/fpx-repository/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="40" column="73" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/fpx-repository/org/springframework/spring-webmvc/5.0.9.RELEASE/spring-webmvc-5.0.9.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2025">
+          <caret line="102" column="32" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/collection/CollectionHandleUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="243">
+          <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/OptimizeOldGC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangk/selflearn/jvmlearn/YoungGCDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="64" column="44" lean-forward="true" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
         </state>
       </provider>
     </entry>

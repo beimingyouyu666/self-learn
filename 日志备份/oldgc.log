@@ -1,0 +1,18 @@
+Java HotSpot(TM) 64-Bit Server VM (25.211-b12) for windows-amd64 JRE (1.8.0_211-b12), built on Apr  1 2019 20:53:26 by "java_re" with MS VC++ 10.0 (VS2010)
+Memory: 4k page, physical 16687976k(3525488k free), swap 33374052k(18339716k free)
+CommandLine flags: -XX:InitialHeapSize=209715200 -XX:MaxHeapSize=209715200 -XX:MaxNewSize=104857600 -XX:MaxTenuringThreshold=15 -XX:NewSize=104857600 -XX:OldPLABSize=16 -XX:PretenureSizeThreshold=3145728 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:SurvivorRatio=8 -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:-UseLargePagesIndividualAllocation -XX:+UseParNewGC 
+45.296: [GC (Allocation Failure) 45.296: [ParNew: 81865K->1188K(92160K), 0.0023093 secs] 81865K->1188K(194560K), 0.0025522 secs] [Times: user=0.06 sys=0.00, real=0.00 secs] 
+61.308: [GC (Allocation Failure) 61.309: [ParNew: 83009K->1304K(92160K), 0.0008634 secs] 83009K->1304K(194560K), 0.0009110 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+77.317: [GC (Allocation Failure) 77.317: [ParNew: 83187K->1616K(92160K), 0.0007362 secs] 83187K->1616K(194560K), 0.0007769 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+93.328: [GC (Allocation Failure) 93.328: [ParNew: 83526K->1510K(92160K), 0.0008317 secs] 83526K->1510K(194560K), 0.0008936 secs] [Times: user=0.06 sys=0.00, real=0.00 secs] 
+109.339: [GC (Allocation Failure) 109.339: [ParNew: 83430K->1408K(92160K), 0.0007178 secs] 83430K->1408K(194560K), 0.0007723 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+126.351: [GC (Allocation Failure) 126.351: [ParNew: 83328K->1460K(92160K), 0.0006802 secs] 83328K->1460K(194560K), 0.0007265 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+142.364: [GC (Allocation Failure) 142.364: [ParNew: 83380K->1227K(92160K), 0.0012649 secs] 83380K->1227K(194560K), 0.0013495 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+158.376: [GC (Allocation Failure) 158.376: [ParNew: 83113K->1136K(92160K), 0.0013679 secs] 83113K->1136K(194560K), 0.0014668 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+174.381: [GC (Allocation Failure) 174.381: [ParNew: 83056K->1336K(92160K), 0.0014549 secs] 83056K->1336K(194560K), 0.0015641 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+190.389: [GC (Allocation Failure) 190.389: [ParNew: 83256K->1329K(92160K), 0.0016440 secs] 83256K->1329K(194560K), 0.0017604 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+206.398: [GC (Allocation Failure) 206.398: [ParNew: 83249K->1106K(92160K), 0.0015654 secs] 83249K->1106K(194560K), 0.0016767 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+222.406: [GC (Allocation Failure) 222.406: [ParNew: 82989K->1106K(92160K), 0.0007499 secs] 82989K->1106K(194560K), 0.0007974 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+239.415: [GC (Allocation Failure) 239.415: [ParNew: 83026K->1312K(92160K), 0.0009990 secs] 83026K->1312K(194560K), 0.0010727 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+255.424: [GC (Allocation Failure) 255.424: [ParNew: 83232K->1091K(92160K), 0.0020782 secs] 83232K->1091K(194560K), 0.0022179 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+271.437: [GC (Allocation Failure) 271.437: [ParNew: 83011K->1308K(92160K), 0.0007934 secs] 83011K->1308K(194560K), 0.0008516 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
