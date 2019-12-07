@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @MapperScan负责扫描dao层的java文件
  */
 @SpringBootApplication
-@MapperScan("com.yangk.selflearn.dao")
+@MapperScan("com.yangk.selflearn.base.dao")
 public class SelfLearnApplication implements CommandLineRunner {
 
     public static void main(String[] args) {

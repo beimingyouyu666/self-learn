@@ -1,7 +1,7 @@
 package com.yangk.selflearn.collection;
 
 import com.alibaba.fastjson.JSONObject;
-import com.yangk.selflearn.dao.User;
+import com.yangk.selflearn.base.dos.User;
 
 import java.util.Arrays;
 import java.util.Collection;

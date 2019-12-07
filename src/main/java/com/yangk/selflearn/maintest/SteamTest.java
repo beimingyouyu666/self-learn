@@ -1,6 +1,6 @@
 package com.yangk.selflearn.maintest;
 
-import com.yangk.selflearn.dao.User;
+import com.yangk.selflearn.base.dos.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;

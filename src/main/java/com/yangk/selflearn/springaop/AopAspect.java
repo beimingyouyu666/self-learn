@@ -27,7 +27,7 @@ import java.lang.reflect.Method;
 @Slf4j
 public class AopAspect {
 
-    @Pointcut("execution(public String com.yangk.selflearn.controller.*.*())")
+    @Pointcut("execution(public String com.yangk.selflearn.base.controller.*.*())")
     public void cut1() {
     }
 

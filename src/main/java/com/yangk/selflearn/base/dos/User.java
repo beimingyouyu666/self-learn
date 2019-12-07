@@ -1,4 +1,4 @@
-package com.yangk.selflearn.dao;
+package com.yangk.selflearn.base.dos;
 
 
 import lombok.Data;

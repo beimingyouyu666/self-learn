@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yangk.selflearn.dao.UserMapper">
-    <resultMap id="BaseResultMap" type="com.yangk.selflearn.dao.User">
+<mapper namespace="com.yangk.selflearn.base.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.yangk.selflearn.base.dos.User">
         <!--
           WARNING - @mbg.generated
         -->
@@ -13,7 +13,7 @@
         <result column="username" jdbcType="VARCHAR" property="username"/>
     </resultMap>
 
-    <select id="queryUserById" resultType="com.yangk.selflearn.dao.User">
+    <select id="queryUserById" resultType="com.yangk.selflearn.base.dos.User">
     select * from user where id=#{"id"}
   </select>
 </mapper>

@@ -1,4 +1,4 @@
-package com.yangk.selflearn.controller;
+package com.yangk.selflearn.base.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
