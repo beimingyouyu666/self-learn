@@ -154,6 +154,12 @@
             <version>1.10.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <version>28.1-jre</version>
+            <artifactId>guava</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

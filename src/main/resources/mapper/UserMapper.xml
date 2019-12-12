@@ -16,4 +16,12 @@
     <select id="queryUserById" resultType="com.yangk.selflearn.base.dos.User">
     select * from user where id=#{"id"}
   </select>
+
+    <select id="queryUsersByIds" resultMap="BaseResultMap">
+        select * from user
+        where id in
+        <foreach collection="ids" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </select>
 </mapper>
