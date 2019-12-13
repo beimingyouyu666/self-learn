@@ -1,12 +1,11 @@
 Java HotSpot(TM) 64-Bit Server VM (25.211-b12) for windows-amd64 JRE (1.8.0_211-b12), built on Apr  1 2019 20:53:26 by "java_re" with MS VC++ 10.0 (VS2010)
-Memory: 4k page, physical 16687976k(6394868k free), swap 33374052k(21043148k free)
-CommandLine flags: -XX:InitialHeapSize=10485760 -XX:MaxHeapSize=10485760 -XX:MaxNewSize=5242880 -XX:NewSize=5242880 -XX:OldPLABSize=16 -XX:PretenureSizeThreshold=10485760 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:SurvivorRatio=8 -XX:+TraceClassLoading -XX:+TraceClassUnloading -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:-UseLargePagesIndividualAllocation -XX:+UseParNewGC 
-0.333: [GC (Allocation Failure) 0.333: [ParNew: 3964K->512K(4608K), 0.0063425 secs] 3964K->2102K(9728K), 0.0065192 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+Memory: 4k page, physical 16687976k(4069484k free), swap 33374052k(17841024k free)
+CommandLine flags: -XX:CMSFullGCsBeforeCompaction=0 -XX:CMSInitiatingOccupancyFraction=92 -XX:+CMSParallelInitialMarkEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError -XX:InitialHeapSize=4294967296 -XX:MaxHeapSize=4294967296 -XX:MaxNewSize=3221225472 -XX:MaxTenuringThreshold=6 -XX:MetaspaceSize=268435456 -XX:NewSize=3221225472 -XX:OldPLABSize=16 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:ThreadStackSize=1024 -XX:+UseCMSCompactAtFullCollection -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:-UseLargePagesIndividualAllocation -XX:+UseParNewGC 
 Heap
- par new generation   total 4608K, used 3703K [0x00000000ff600000, 0x00000000ffb00000, 0x00000000ffb00000)
-  eden space 4096K,  77% used [0x00000000ff600000, 0x00000000ff91dd78, 0x00000000ffa00000)
-  from space 512K, 100% used [0x00000000ffa80000, 0x00000000ffb00000, 0x00000000ffb00000)
-  to   space 512K,   0% used [0x00000000ffa00000, 0x00000000ffa00000, 0x00000000ffa80000)
- concurrent mark-sweep generation total 5120K, used 1590K [0x00000000ffb00000, 0x0000000100000000, 0x0000000100000000)
- Metaspace       used 3238K, capacity 4496K, committed 4864K, reserved 1056768K
+ par new generation   total 2831168K, used 201329K [0x00000006c0000000, 0x0000000780000000, 0x0000000780000000)
+  eden space 2516608K,   8% used [0x00000006c0000000, 0x00000006cc49c438, 0x00000007599a0000)
+  from space 314560K,   0% used [0x00000007599a0000, 0x00000007599a0000, 0x000000076ccd0000)
+  to   space 314560K,   0% used [0x000000076ccd0000, 0x000000076ccd0000, 0x0000000780000000)
+ concurrent mark-sweep generation total 1048576K, used 0K [0x0000000780000000, 0x00000007c0000000, 0x00000007c0000000)
+ Metaspace       used 3251K, capacity 4496K, committed 4864K, reserved 1056768K
   class space    used 350K, capacity 388K, committed 512K, reserved 1048576K

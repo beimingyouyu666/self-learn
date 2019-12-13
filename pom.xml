@@ -154,10 +154,18 @@
             <version>1.10.2</version>
         </dependency>
 
+        <!--一些工具类-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <version>28.1-jre</version>
             <artifactId>guava</artifactId>
+        </dependency>
+
+        <!--动态生成类-->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.3.0</version>
         </dependency>
 
     </dependencies>
