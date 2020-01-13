@@ -1,4 +1,4 @@
-package com.yangk.selflearn.jvmlearn;
+package com.yangk.selflearn.limao.jvmlearn;
 
 import com.yangk.selflearn.base.dos.User;
 

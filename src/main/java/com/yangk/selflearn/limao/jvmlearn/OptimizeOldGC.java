@@ -1,4 +1,4 @@
-package com.yangk.selflearn.jvmlearn;
+package com.yangk.selflearn.limao.jvmlearn;
 
 /**
  * @Description 优化老年代gc

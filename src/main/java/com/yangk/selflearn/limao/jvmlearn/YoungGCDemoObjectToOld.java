@@ -1,4 +1,4 @@
-package com.yangk.selflearn.jvmlearn;
+package com.yangk.selflearn.limao.jvmlearn;
 
 /**
  * @Description 测试年轻代垃圾回收对象进入老年代

@@ -1,4 +1,4 @@
-package com.yangk.selflearn.jvmlearn;
+package com.yangk.selflearn.limao.jvmlearn;
 
 /**
  * @Description 年轻代gc测试对象进入老年代

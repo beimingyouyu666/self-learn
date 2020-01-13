@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Slf4j
-public class TransactionalDemoTest extends SelfLearnApplicationTests {
+public class TransactionalRequiredTest extends SelfLearnApplicationTests {
 
     @Autowired
     TransactionalDemo transactionalDemo;

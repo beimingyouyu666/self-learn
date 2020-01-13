@@ -1,4 +1,4 @@
-package com.yangk.selflearn.jvmlearn;
+package com.yangk.selflearn.limao.jvmlearn;
 
 /**
  * @Description 模拟触发young gc

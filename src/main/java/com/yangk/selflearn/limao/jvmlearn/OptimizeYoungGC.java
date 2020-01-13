@@ -1,4 +1,4 @@
-package com.yangk.selflearn.jvmlearn;
+package com.yangk.selflearn.limao.jvmlearn;
 
 /**
  * @Description 模拟年轻代gc情况，使用jstat，jmap，jhat命令查看内存情况
