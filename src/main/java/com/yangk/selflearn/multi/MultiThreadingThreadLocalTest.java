@@ -11,8 +11,8 @@ public class MultiThreadingThreadLocalTest {
 
     public static ThreadLocal<User> userThreadLocal = new ThreadLocal<>();
 
-    public void add(){
-        User user = new User("MultiThreadingThreadLocalTest","MultiThreadingThreadLocalTest");
+    public void add() {
+        User user = new User("MultiThreadingThreadLocalTest", "MultiThreadingThreadLocalTest");
         userThreadLocal.set(user);
     }
 

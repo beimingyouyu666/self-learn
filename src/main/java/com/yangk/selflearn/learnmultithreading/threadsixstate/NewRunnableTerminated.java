@@ -6,7 +6,7 @@ package com.yangk.selflearn.learnmultithreading.threadsixstate;
  * @Date 2020/2/15
  * @Version 1.0
  */
-public class NewRunnableTerminated implements Runnable{
+public class NewRunnableTerminated implements Runnable {
 
 
     public static void main(String[] args) throws InterruptedException {
@@ -25,8 +25,8 @@ public class NewRunnableTerminated implements Runnable{
     @Override
     public void run() {
         for (int i = 0; i < 10000; i++) {
-            if (i % 10 == 0 ) {
-                System.out.println(i+"是10的倍数");
+            if (i % 10 == 0) {
+                System.out.println(i + "是10的倍数");
             }
         }
     }

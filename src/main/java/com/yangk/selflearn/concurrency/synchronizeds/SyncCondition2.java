@@ -2,7 +2,7 @@ package com.yangk.selflearn.concurrency.synchronizeds;
 
 /**
  * @Description 两个线程访问的是两个对象的同步方法
- *  --无先后顺序,因为锁对象不同
+ * --无先后顺序,因为锁对象不同
  * @Author yangkun
  * @Date 2020/1/8
  * @Version 1.0
@@ -14,13 +14,13 @@ public class SyncCondition2 implements Runnable {
 
     @Override
     public synchronized void run() {
-        System.out.println("开始执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("开始执行，线程名为：" + Thread.currentThread().getName());
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("结束执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("结束执行，线程名为：" + Thread.currentThread().getName());
     }
 
     public static void main(String[] args) {

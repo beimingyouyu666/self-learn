@@ -12,51 +12,51 @@ import org.apache.commons.lang3.StringUtils;
  */
 @Data
 @Accessors(chain = true)
-public class ExportDTO implements Comparable<ExportDTO>{
+public class ExportDTO implements Comparable<ExportDTO> {
 
     /**
-     省份
+     * 省份
      */
     private String areaName;
 
     /**
-     备案号
+     * 备案号
      */
     private String recordNo;
 
     /**
-     机构名称
+     * 机构名称
      */
     private String compName;
 
     /**
-     地址
+     * 地址
      */
     private String address;
 
     /**
-     联系人
+     * 联系人
      */
     private String linkMan;
 
     /**
-     联系人号码
+     * 联系人号码
      */
     private String linkTel;
 
     /**
-     备案状态
+     * 备案状态
      */
     private String recordStatus;
 
     /**
-     详情
+     * 详情
      */
     private String detail;
 
 
     @Override
     public int compareTo(ExportDTO o) {
-        return areaName.compareTo(StringUtils.isBlank(o.getAreaName())?"":o.getAreaName());
+        return areaName.compareTo(StringUtils.isBlank(o.getAreaName()) ? "" : o.getAreaName());
     }
 }

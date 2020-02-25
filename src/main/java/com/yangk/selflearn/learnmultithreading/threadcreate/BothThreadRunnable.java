@@ -14,7 +14,7 @@ public class BothThreadRunnable {
             public void run() {
                 System.out.println("通过runnable");
             }
-        }){
+        }) {
             @Override
             public void run() {
                 System.out.println("通过thread");

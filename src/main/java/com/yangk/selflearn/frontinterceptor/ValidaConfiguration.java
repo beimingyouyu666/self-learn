@@ -16,18 +16,18 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class ValidaConfiguration implements WebMvcConfigurer {
 
-	
-	@Bean
-    public ValidaInterceptor myInterceptor(){
+
+    @Bean
+    public ValidaInterceptor myInterceptor() {
         return new ValidaInterceptor();
     }
-	
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		// 添加拦截的接口
-		registry.addInterceptor(myInterceptor())
-		.addPathPatterns("/hello")
-		.addPathPatterns("/hehe");
-	}
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        // 添加拦截的接口
+        registry.addInterceptor(myInterceptor())
+                .addPathPatterns("/hello")
+                .addPathPatterns("/hehe");
+    }
 
 }

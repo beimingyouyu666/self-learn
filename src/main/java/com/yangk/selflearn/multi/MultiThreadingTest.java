@@ -28,39 +28,39 @@ public class MultiThreadingTest {
             log.info("before handle,user is :{}", MultiThreadingThreadLocalTest.userThreadLocal.get());
 
             if (user1 == null) {
-                User user = new User(i+"",i+"");
+                User user = new User(i + "", i + "");
                 MultiThreadingThreadLocalTest.userThreadLocal.set(user);
             } else {
-                user1.setId(user1.getId()+"-"+i);
-                user1.setName(user1.getName()+"-"+i);
+                user1.setId(user1.getId() + "-" + i);
+                user1.setName(user1.getName() + "-" + i);
                 MultiThreadingThreadLocalTest.userThreadLocal.set(user1);
             }
             log.info("after handle,user is :{}", MultiThreadingThreadLocalTest.userThreadLocal.get());
         }
 
-        threadPoolExecutor.execute(()->{
+        threadPoolExecutor.execute(() -> {
             User user1 = MultiThreadingThreadLocalTest.userThreadLocal.get();
             log.info("before handle,user is :{}", MultiThreadingThreadLocalTest.userThreadLocal.get());
             if (user1 == null) {
-                User user = new User(1+"",1+"");
+                User user = new User(1 + "", 1 + "");
                 MultiThreadingThreadLocalTest.userThreadLocal.set(user);
             } else {
-                user1.setId(user1.getId()+"-"+1);
-                user1.setName(user1.getName()+"-"+1);
+                user1.setId(user1.getId() + "-" + 1);
+                user1.setName(user1.getName() + "-" + 1);
                 MultiThreadingThreadLocalTest.userThreadLocal.set(user1);
             }
             log.info("after handle,user is :{}", MultiThreadingThreadLocalTest.userThreadLocal.get());
         });
 
-        threadPoolExecutor.execute(()->{
+        threadPoolExecutor.execute(() -> {
             User user1 = MultiThreadingThreadLocalTest.userThreadLocal.get();
             log.info("before handle,user is :{}", MultiThreadingThreadLocalTest.userThreadLocal.get());
             if (user1 == null) {
-                User user = new User(2+"",2+"");
+                User user = new User(2 + "", 2 + "");
                 MultiThreadingThreadLocalTest.userThreadLocal.set(user);
             } else {
-                user1.setId(user1.getId()+"-"+2);
-                user1.setName(user1.getName()+"-"+2);
+                user1.setId(user1.getId() + "-" + 2);
+                user1.setName(user1.getName() + "-" + 2);
                 MultiThreadingThreadLocalTest.userThreadLocal.set(user1);
             }
             log.info("after handle,user is :{}", MultiThreadingThreadLocalTest.userThreadLocal.get());

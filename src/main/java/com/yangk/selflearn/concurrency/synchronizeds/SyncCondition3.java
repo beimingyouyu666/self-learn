@@ -2,7 +2,7 @@ package com.yangk.selflearn.concurrency.synchronizeds;
 
 /**
  * @Description 两个线程访问的是synchronized的静态方法
- *  --有先后顺序,因为锁对象是class对象
+ * --有先后顺序,因为锁对象是class对象
  * @Author yangkun
  * @Date 2020/1/8
  * @Version 1.0
@@ -18,13 +18,13 @@ public class SyncCondition3 implements Runnable {
     }
 
     private static synchronized void method() {
-        System.out.println("开始执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("开始执行，线程名为：" + Thread.currentThread().getName());
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("结束执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("结束执行，线程名为：" + Thread.currentThread().getName());
     }
 
     public static void main(String[] args) {

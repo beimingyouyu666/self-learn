@@ -15,14 +15,14 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class TransactionalRequiresNew {
 
-    @Transactional(rollbackFor=Exception.class,propagation = Propagation.REQUIRED)
+    @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED)
     public void methodA() {
         System.out.println("methodA start tranactional");
         methodB();
         System.out.println("methodA end tranactional");
     }
 
-    @Transactional(rollbackFor=Exception.class,propagation = Propagation.REQUIRES_NEW)
+    @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
     public void methodB() {
         System.out.println("methodA start tranactional");
 

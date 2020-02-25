@@ -7,9 +7,8 @@ import java.util.Map;
 
 /**
  * @Description 多线程安全问题3--初始化问题
- *
- *  在构造函数中未初始化完毕就将this赋值，导致有些值还没初始化
- *
+ * <p>
+ * 在构造函数中未初始化完毕就将this赋值，导致有些值还没初始化
  * @Author yangkun
  * @Date 2020/2/21
  * @Version 1.0
@@ -26,8 +25,9 @@ public class MultiThreadError4 {
 
     }
 }
+
 @Data
-class Point{
+class Point {
 
     public Point(int x, int y) throws InterruptedException {
         this.x = x;

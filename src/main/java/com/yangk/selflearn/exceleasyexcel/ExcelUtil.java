@@ -108,9 +108,11 @@ public class ExcelUtil {
      * @param sheetName 导入文件的 sheet 名
      * @param object    映射实体类，Excel 模型
      */
-    public static ExcelWriterFactroy writeExcelWithSheets(HttpServletResponse response, String userAgent, List<? extends BaseRowModel> list,
+    public static ExcelWriterFactroy writeExcelWithSheets(HttpServletResponse response, String userAgent, List<?
+            extends BaseRowModel> list,
                                                           String fileName, String sheetName, BaseRowModel object) {
-        ExcelWriterFactroy writer = new ExcelWriterFactroy(getOutputStream(fileName, response, userAgent), ExcelTypeEnum.XLSX);
+        ExcelWriterFactroy writer = new ExcelWriterFactroy(getOutputStream(fileName, response, userAgent),
+                ExcelTypeEnum.XLSX);
         Sheet sheet = new Sheet(1, 0, object.getClass());
         sheet.setSheetName(sheetName);
         /*Table table = new Table(1);

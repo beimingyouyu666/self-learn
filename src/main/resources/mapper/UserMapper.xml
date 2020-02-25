@@ -14,8 +14,8 @@
     </resultMap>
 
     <select id="queryUserById" resultType="com.yangk.selflearn.base.dos.User">
-    select * from user where id=#{"id"}
-  </select>
+        select * from user where id=#{"id"}
+    </select>
 
     <select id="queryUsersByIds" resultMap="BaseResultMap">
         select * from user

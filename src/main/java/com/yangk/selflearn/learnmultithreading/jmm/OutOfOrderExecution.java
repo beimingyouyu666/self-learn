@@ -4,9 +4,9 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * @Description 指令重排序
- *
- *  出现了：x=0y=0，说明代码的有可能的执行顺序为：y=a,a=1,x=b,b=1，thread2的两句代码进行了重排序
- *  第53443次:x=0y=1
+ * <p>
+ * 出现了：x=0y=0，说明代码的有可能的执行顺序为：y=a,a=1,x=b,b=1，thread2的两句代码进行了重排序
+ * 第53443次:x=0y=1
  * 第53444次:x=0y=1
  * 第53445次:x=0y=1
  * 第53446次:x=0y=0
@@ -54,10 +54,10 @@ public class OutOfOrderExecution {
             thread1.join();
             thread2.join();
             String result = "第" + (count++) + "次:" + "x=" + x + "y=" + y;
-            if (x==0 && y==0){
+            if (x == 0 && y == 0) {
                 System.out.println(result);
                 break;
-            }else {
+            } else {
                 System.out.println(result);
             }
         }

@@ -13,9 +13,9 @@ public class PrintOddEvenSelf {
     public static void main(String[] args) throws InterruptedException {
         Thread thread1 = new Thread(() -> {
             synchronized (PrintOddEvenSelf.class) {
-                while (count <=100) {
+                while (count <= 100) {
                     if (count % 2 == 0) {
-                        System.out.println("thread1打印："+count);
+                        System.out.println("thread1打印：" + count);
                         count++;
                         try {
                             PrintOddEvenSelf.class.notify();
@@ -34,9 +34,9 @@ public class PrintOddEvenSelf {
 
         Thread thread2 = new Thread(() -> {
             synchronized (PrintOddEvenSelf.class) {
-                while (count <=100) {
+                while (count <= 100) {
                     if (count % 2 == 1) {
-                        System.out.println("thread2打印："+count);
+                        System.out.println("thread2打印：" + count);
                         count++;
                         try {
                             PrintOddEvenSelf.class.notify();

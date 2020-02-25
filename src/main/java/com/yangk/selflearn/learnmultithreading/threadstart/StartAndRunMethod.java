@@ -9,7 +9,7 @@ package com.yangk.selflearn.learnmultithreading.threadstart;
 public class StartAndRunMethod {
 
     public static void main(String[] args) {
-        Runnable runnable = ()->{
+        Runnable runnable = () -> {
 
         };
     }

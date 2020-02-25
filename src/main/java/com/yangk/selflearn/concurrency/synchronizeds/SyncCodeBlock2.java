@@ -6,9 +6,9 @@ package com.yangk.selflearn.concurrency.synchronizeds;
  * @Date 2020/1/6
  * @Version 1.0
  */
-public class SyncCodeBlock2 implements Runnable{
+public class SyncCodeBlock2 implements Runnable {
 
-    private static SyncCodeBlock2 syncCodeBlock2  = new SyncCodeBlock2();
+    private static SyncCodeBlock2 syncCodeBlock2 = new SyncCodeBlock2();
 
     private static int i = 0;
 
@@ -27,13 +27,13 @@ public class SyncCodeBlock2 implements Runnable{
     @Override
     public void run() {
         synchronized (this) {
-            System.out.println("线程开始，当前线程："+Thread.currentThread().getName());
+            System.out.println("线程开始，当前线程：" + Thread.currentThread().getName());
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("线程结束，当前线程："+Thread.currentThread().getName());
+            System.out.println("线程结束，当前线程：" + Thread.currentThread().getName());
         }
     }
 }

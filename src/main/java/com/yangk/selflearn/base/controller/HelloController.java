@@ -9,13 +9,13 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello(String msg) {
 
-        return "hello springboot！"+msg;
+        return "hello springboot！" + msg;
     }
 
     @RequestMapping("/hehe")
     public String hehe(String msg) {
 
-        return "hello springboot！"+msg;
+        return "hello springboot！" + msg;
     }
 
 }

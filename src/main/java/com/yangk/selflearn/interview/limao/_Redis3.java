@@ -12,7 +12,6 @@ public class _Redis3 {
      *6.redis cluster的核心原理分析：gossip通信、jedis smart定位、主备切换
      *7.你能说说redis的并发竞争问题该如何解决吗？
      *8.
-
      *
      1、redis replication的核心机制
 
@@ -69,8 +68,6 @@ public class _Redis3 {
      上面的配置就确保了，如果跟任何一个slave丢了连接，在10秒后发现没有slave给自己ack，那么就拒绝新的写请求
 
      因此在脑裂场景下，最多就丢失10秒的数据
-
-
      *
      *
      *
@@ -270,14 +267,10 @@ public class _Redis3 {
      所有的master node开始slave选举投票，给要进行选举的slave进行投票，如果大部分master node（N/2 + 1）都投票给了某个从节点，那么选举通过，那个从节点可以切换成master
 
      从节点执行主备切换，从节点切换为主节点
-
-
      *
      *
 
      7、你能说说redis的并发竞争问题该如何解决吗？
-
-
      *
      *
      *

@@ -13,7 +13,7 @@ public class Join {
         Thread thread = new Thread(() -> {
             try {
                 Thread.sleep(5000);
-                System.out.println("main线程的状态为："+mainThread.getState());
+                System.out.println("main线程的状态为：" + mainThread.getState());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

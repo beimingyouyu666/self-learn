@@ -2,7 +2,7 @@ package com.yangk.selflearn.concurrency.synchronizeds;
 
 /**
  * @Description 两个线程同时访问静态synchronize的非静态的synchronized方法
- *  -- 锁对象不一样，有先后顺序
+ * -- 锁对象不一样，有先后顺序
  * @Author yangkun
  * @Date 2020/1/8
  * @Version 1.0
@@ -21,23 +21,23 @@ public class SyncCondition6 implements Runnable {
     }
 
     private static synchronized void method1() {
-        System.out.println("同步方法开始执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("同步方法开始执行，线程名为：" + Thread.currentThread().getName());
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("同步方法结束执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("同步方法结束执行，线程名为：" + Thread.currentThread().getName());
     }
 
     private synchronized void method2() {
-        System.out.println("同步方法2开始执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("同步方法2开始执行，线程名为：" + Thread.currentThread().getName());
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("同步方法2结束执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("同步方法2结束执行，线程名为：" + Thread.currentThread().getName());
     }
 
     public static void main(String[] args) {

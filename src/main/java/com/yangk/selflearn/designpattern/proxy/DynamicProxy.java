@@ -12,7 +12,7 @@ import java.lang.reflect.Proxy;
  */
 public class DynamicProxy {
 
-    public static <T> T newInstance(ClassLoader classLoader, Class<?>[] classes, InvocationHandler handler){
+    public static <T> T newInstance(ClassLoader classLoader, Class<?>[] classes, InvocationHandler handler) {
 
         return (T) Proxy.newProxyInstance(classLoader, classes, handler);
     }

@@ -11,11 +11,11 @@ import java.lang.reflect.Proxy;
  */
 public class SubjectDynamicProxy extends DynamicProxy {
 
-    public static <T> T newInstance(Subject subject){
+    public static <T> T newInstance(Subject subject) {
         MyInvocationHandler myInvocationHandler = new MyInvocationHandler(subject);
         ClassLoader classLoader = subject.getClass().getClassLoader();
         Class<?>[] interfaces = subject.getClass().getInterfaces();
-        return (T) Proxy.newProxyInstance(classLoader,interfaces,myInvocationHandler);
+        return (T) Proxy.newProxyInstance(classLoader, interfaces, myInvocationHandler);
     }
 
 }

@@ -10,7 +10,7 @@ import lombok.Data;
  * @blame yangkun
  */
 @Data
-public class UserDTO  implements Comparable<UserDTO>{
+public class UserDTO implements Comparable<UserDTO> {
 
     /**
      * 主键

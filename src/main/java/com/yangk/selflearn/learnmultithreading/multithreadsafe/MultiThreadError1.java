@@ -2,8 +2,8 @@ package com.yangk.selflearn.learnmultithreading.multithreadsafe;
 
 /**
  * @Description 多线程安全问题1--a++
- *
- *      两个线程同时对a进行操作，不能得到预期的20000
+ * <p>
+ * 两个线程同时对a进行操作，不能得到预期的20000
  * @Author yangkun
  * @Date 2020/2/21
  * @Version 1.0
@@ -20,7 +20,7 @@ public class MultiThreadError1 implements Runnable {
         thread2.start();
         thread1.join();
         thread2.join();
-        System.out.println("a:"+a);
+        System.out.println("a:" + a);
 
     }
 

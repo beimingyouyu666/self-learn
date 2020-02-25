@@ -2,8 +2,7 @@ package com.yangk.selflearn.learnmultithreading.multithreadsafe;
 
 /**
  * @Description 多线程安全问题3--初始化问题
- *  隐式溢出--注册监听事件
- *
+ * 隐式溢出--注册监听事件
  * @Author yangkun
  * @Date 2020/2/21
  * @Version 1.0
@@ -18,11 +17,11 @@ public class MultiThreadError5 {
 
 }
 
-interface Subject{
+interface Subject {
     void doSomething();
 }
 
-class ConcreateSubject implements Subject{
+class ConcreateSubject implements Subject {
 
     public ConcreateSubject(Observer observer) {
         this.observer = observer;
@@ -36,7 +35,7 @@ class ConcreateSubject implements Subject{
     }
 }
 
-class Observer{
+class Observer {
     public void receive() {
         System.out.println("receive subject doSomething");
     }

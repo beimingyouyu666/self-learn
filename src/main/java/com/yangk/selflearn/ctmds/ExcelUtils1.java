@@ -39,7 +39,8 @@ public class ExcelUtils1 {
         this.excelHeaderInfo1s = excelHeaderInfo1s;
     }
 
-    public ExcelUtils1(List list, List<ExcelHeaderInfo1> excelHeaderInfo1s, Map<String, ExcelFormat1> formatInfo, Class clazz) {
+    public ExcelUtils1(List list, List<ExcelHeaderInfo1> excelHeaderInfo1s, Map<String, ExcelFormat1> formatInfo,
+                       Class clazz) {
         this.list = list;
         this.excelHeaderInfo1s = excelHeaderInfo1s;
         this.formatInfo = formatInfo;
@@ -156,7 +157,7 @@ public class ExcelUtils1 {
     private String[][] transformData() {
         int dataSize = this.list.size();
         String[][] datas = new String[dataSize][];
-        if (CollectionUtils.isEmpty(this.list)){
+        if (CollectionUtils.isEmpty(this.list)) {
             return datas;
         }
         // 获取报表的列数
@@ -202,7 +203,7 @@ public class ExcelUtils1 {
         Integer maxRowNum = 0;
         for (ExcelHeaderInfo1 excelHeaderInfo1 : headerInfos) {
             Integer tmpRowNum = excelHeaderInfo1.getLastRow();
-            if (tmpRowNum > maxRowNum){
+            if (tmpRowNum > maxRowNum) {
                 maxRowNum = tmpRowNum;
             }
         }
@@ -217,7 +218,7 @@ public class ExcelUtils1 {
         // 设置单元格边框线
         setBorder(style);
         // 设置字体
-        setFont(workbook, style,(short)14);
+        setFont(workbook, style, (short) 14);
         return style;
     }
 
@@ -229,7 +230,7 @@ public class ExcelUtils1 {
         // 设置单元格边框线
         setBorder(style);
         // 设置字体
-        setFont(workbook, style,(short)10);
+        setFont(workbook, style, (short) 10);
 
         return style;
     }
@@ -280,7 +281,7 @@ public class ExcelUtils1 {
      * @Return
      **/
     private String stringDate2String(String strDate) {
-        if (strDate == null){
+        if (strDate == null) {
             return "";
         }
         Date date = null;

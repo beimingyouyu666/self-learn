@@ -39,7 +39,6 @@ public class IdGeneratorTest extends SelfLearnApplicationTests {
     }
 
 
-
     @Test
     public void testSnowflakeId() {
         ExecutorService executorService = Executors.newFixedThreadPool(20);

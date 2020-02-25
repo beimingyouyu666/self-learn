@@ -13,17 +13,17 @@ import lombok.Data;
 public class DoctorDTO {
 
     /**
-    科室
+     * 科室
      */
     private String department;
 
     /**
-     姓名
+     * 姓名
      */
     private String name;
 
     /**
-     职称
+     * 职称
      */
     private String title;
 }

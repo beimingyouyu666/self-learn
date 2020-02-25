@@ -12,9 +12,9 @@ public class RightWayStopThreadWithoutSleep implements Runnable {
     public void run() {
         int count = 0;
         // 加上一个判断标志，不然无法停止线程
-        while (!Thread.currentThread().isInterrupted() && count <= Integer.MAX_VALUE/2 ){
-            if (count % 10000 == 0){
-                System.out.println(count+"是10000的倍数");
+        while (!Thread.currentThread().isInterrupted() && count <= Integer.MAX_VALUE / 2) {
+            if (count % 10000 == 0) {
+                System.out.println(count + "是10000的倍数");
             }
             count++;
         }

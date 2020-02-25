@@ -23,7 +23,6 @@ import java.util.function.UnaryOperator;
  * UnaryOperator 接受参数 T 对象，进行业务处理后，返回T对象，比如一些加强修改场景
  * <p>
  * BinaryOperator 接受两个T对象，进行业务处理后，返回一个T对象
- *
  * @Author yangkun
  * @Date 2019/12/7
  * @Version 1.0
@@ -48,7 +47,7 @@ public class FunctionalInterface {
     }
 
     public void testLambda() {
-        new Thread(()->{
+        new Thread(() -> {
             String s = "内部变量";
             System.out.println(this.ss);
         });

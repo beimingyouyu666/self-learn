@@ -2,7 +2,7 @@ package com.yangk.selflearn.concurrency.synchronizeds;
 
 /**
  * @Description 方法抛异常后会释放锁
- *  --
+ * --
  * @Author yangkun
  * @Date 2020/1/8
  * @Version 1.0
@@ -21,25 +21,25 @@ public class SyncConditionException7 implements Runnable {
     }
 
     private synchronized void method1() {
-        System.out.println("同步方法开始执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("同步方法开始执行，线程名为：" + Thread.currentThread().getName());
         int i = 0;
-        int j = i/i;
+        int j = i / i;
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("同步方法结束执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("同步方法结束执行，线程名为：" + Thread.currentThread().getName());
     }
 
     private synchronized void method2() {
-        System.out.println("同步方法2开始执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("同步方法2开始执行，线程名为：" + Thread.currentThread().getName());
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("同步方法2结束执行，线程名为："+Thread.currentThread().getName());
+        System.out.println("同步方法2结束执行，线程名为：" + Thread.currentThread().getName());
     }
 
     public static void main(String[] args) {

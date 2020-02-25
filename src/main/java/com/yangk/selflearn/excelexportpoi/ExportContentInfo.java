@@ -14,19 +14,19 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class ExportContentInfo {
 
-        private Long id;
-        private String productName;
-        private Long categoryId;
-        private String categoryName;
-        private Long branchId;
-        private String branchName;
-        private Long shopId;
-        private String shopName;
-        private Double price;
-        private Integer stock;
-        private Integer salesNum;
-        private String createTime;
-        private String updateTime;
-        private Byte isDel;
+    private Long id;
+    private String productName;
+    private Long categoryId;
+    private String categoryName;
+    private Long branchId;
+    private String branchName;
+    private Long shopId;
+    private String shopName;
+    private Double price;
+    private Integer stock;
+    private Integer salesNum;
+    private String createTime;
+    private String updateTime;
+    private Byte isDel;
 
 }

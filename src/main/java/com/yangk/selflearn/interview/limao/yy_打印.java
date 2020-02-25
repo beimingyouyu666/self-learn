@@ -5,12 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class yy_打印 {
- public static void main(String[] args) {
+    public static void main(String[] args) {
 
-     int ssd[] = {1,2,3};
-     List<List<Integer>> subsets = subsets(ssd);
-     System.out.println(subsets);
- }
+        int ssd[] = {1, 2, 3};
+        List<List<Integer>> subsets = subsets(ssd);
+        System.out.println(subsets);
+    }
 
     /**
      * <p>数组的每一位数字状态：选择（1） or 不选（0），因此，每一个子集可由一组二进制数表示；

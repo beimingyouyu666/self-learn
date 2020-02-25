@@ -24,9 +24,11 @@ public class ProducerConsumer {
 
 class Producer implements Runnable {
     private EventStronge stronge;
+
     public Producer(EventStronge stronge) {
         this.stronge = stronge;
     }
+
     @Override
     public void run() {
         try {
@@ -41,9 +43,11 @@ class Producer implements Runnable {
 
 class Consumer implements Runnable {
     private EventStronge stronge;
+
     public Consumer(EventStronge stronge) {
         this.stronge = stronge;
     }
+
     @Override
     public void run() {
         try {
@@ -59,10 +63,12 @@ class Consumer implements Runnable {
 class EventStronge {
     private int size;
     private LinkedList<Date> list;
+
     public EventStronge() {
         this.size = 10;
         this.list = new LinkedList<>();
     }
+
     public synchronized void put() throws InterruptedException {
         while (list.size() == 10) {
             System.out.println("仓库满了");
@@ -72,6 +78,7 @@ class EventStronge {
         System.out.println("添加一个数据，仓库目前容量：" + list.size());
         notify();
     }
+
     public synchronized void take() throws InterruptedException {
         while (list.size() == 0) {
             System.out.println("仓库没数据了");

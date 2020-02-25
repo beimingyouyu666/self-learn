@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class SpringContextUtil implements ApplicationContextAware {
 
     /**
-     上下文
+     * 上下文
      */
     private static ApplicationContext applicationContext;
 

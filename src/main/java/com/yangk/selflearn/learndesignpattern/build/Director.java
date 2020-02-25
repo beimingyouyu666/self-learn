@@ -13,16 +13,15 @@ public class Director {
 
     private BMWBuild bmwBuild = new BMWBuild();
 
-    public BMWCar buildBMW(){
+    public BMWCar buildBMW() {
         this.bmwBuild.setPart();
         return (BMWCar) this.bmwBuild.build();
     }
 
-    public BenzCar buildBenz(){
+    public BenzCar buildBenz() {
         this.benzBuild.setPart();
         return (BenzCar) this.benzBuild.build();
     }
-
 
 
 }

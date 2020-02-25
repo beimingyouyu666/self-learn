@@ -11,7 +11,8 @@ public class Client {
 
     public static void main(String[] args) {
 //        Subject subject = new ConcreteSubject();
-//        Subject proxy = DynamicProxy.newInstance(subject.getClass().getClassLoader(), subject.getClass().getInterfaces(), new MyInvocationHandler(subject));
+//        Subject proxy = DynamicProxy.newInstance(subject.getClass().getClassLoader(), subject.getClass()
+// .getInterfaces(), new MyInvocationHandler(subject));
 //        proxy.doSomething();
 
         Subject subject = new ConcreteSubject();

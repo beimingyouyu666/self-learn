@@ -7,15 +7,15 @@ import java.util.List;
 
 /**
  * @Description 模拟堆内存溢出
- *
+ * <p>
  * jvm参数:-Xms10m -Xmx10m
- *
+ * <p>
  * jvm参数：
  * -Xms10m -Xmx10m
  * -XX:+UseParNewGC -XX:+UseConcMarkSweepGC
  * -XX:+PrintGCDetails -Xloggc:stackoverflowgc.log
  * -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./
- *
+ * <p>
  * 当创建到360145个对象的时候，堆内存溢出
  * @Author yangkun
  * @Date 2019/12/12
@@ -31,7 +31,7 @@ public class HeapOverFlowDemo {
         List<User> list = new ArrayList<>();
         while (true) {
             list.add(new User());
-            System.out.println("目前创建了"+(++count)+"个对象");
+            System.out.println("目前创建了" + (++count) + "个对象");
         }
     }
 

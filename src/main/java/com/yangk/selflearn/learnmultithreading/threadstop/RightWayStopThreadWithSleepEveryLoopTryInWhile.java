@@ -28,7 +28,7 @@ public class RightWayStopThreadWithSleepEveryLoopTryInWhile {
                 try {
                     Thread.sleep(10);
                 } catch (InterruptedException e) {
-                    log.error("抛出了异常："+Thread.currentThread().getName());
+                    log.error("抛出了异常：" + Thread.currentThread().getName());
                     e.printStackTrace();
                 }
             }

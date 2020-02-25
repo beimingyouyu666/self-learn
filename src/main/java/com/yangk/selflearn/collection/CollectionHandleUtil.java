@@ -42,7 +42,7 @@ public class CollectionHandleUtil {
      * @Param [original, remove]
      * @Return
      **/
-    public static <T> List<T> remove(Collection<T> original,Collection<T> remove) {
+    public static <T> List<T> remove(Collection<T> original, Collection<T> remove) {
         return findAll(original, e -> (remove == null) || !remove.contains(e));
     }
 
@@ -64,7 +64,7 @@ public class CollectionHandleUtil {
      * @Param [collection, predicate]
      * @Return
      **/
-    public static <T> T findFirst(Collection<T> collection,Predicate<T> predicate) {
+    public static <T> T findFirst(Collection<T> collection, Predicate<T> predicate) {
         return (T) collection.stream().filter(predicate).findFirst().orElse(null);
     }
 
@@ -75,8 +75,8 @@ public class CollectionHandleUtil {
      * @Param [collection, predicate]
      * @Return
      **/
-    public static <T> boolean exit(Collection<T> collection,Predicate<T> predicate) {
-        return findFirst(collection,predicate) != null;
+    public static <T> boolean exit(Collection<T> collection, Predicate<T> predicate) {
+        return findFirst(collection, predicate) != null;
     }
 
     /**
@@ -86,9 +86,9 @@ public class CollectionHandleUtil {
      * @Param [collection, function]
      * @Return
      **/
-    public static <T,R> List distinct(Collection<T> collection, Function<T,R> function) {
+    public static <T, R> List distinct(Collection<T> collection, Function<T, R> function) {
         final Set<R> set = new HashSet<>();
-        return findAll(collection,t-> set.add(function.apply((T) t)));
+        return findAll(collection, t -> set.add(function.apply((T) t)));
 
     }
 
@@ -105,10 +105,10 @@ public class CollectionHandleUtil {
 
     public static void main(String[] args) {
         List<User> users = Arrays.asList(
-                new User(1,1,"11"),
-                new User(2,2,"22"),
-                new User(1,3,"33"),
-                new User(4,4,"4")
+                new User(1, 1, "11"),
+                new User(2, 2, "22"),
+                new User(1, 3, "33"),
+                new User(4, 4, "4")
 
         );
         List userDis = distinct(users, user -> user.getId());
@@ -127,7 +127,7 @@ public class CollectionHandleUtil {
         System.out.println("exit-----------------------------------");
         System.out.println(JSONObject.toJSONString(exit));
 
-        foreach(users, user->user.setSex(66));
+        foreach(users, user -> user.setSex(66));
         System.out.println("foreach-----------------------------------");
         System.out.println(JSONObject.toJSONString(users));
 

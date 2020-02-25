@@ -8,7 +8,7 @@ package com.yangk.selflearn.learnmultithreading.jmm;
  */
 public class FiledVisibility {
 
-    int x = 1,y=2;
+    int x = 1, y = 2;
 
     public static void main(String[] args) throws InterruptedException {
         while (true) {
@@ -27,12 +27,12 @@ public class FiledVisibility {
     private void print() {
         // 因为在线程1调用change方法中修改了x,y的值，但是thread2中只看到了y的最新值，并没看到x的最新值
         // 就可能会打印“x=1,y=3”
-        System.out.println("x="+x+",y="+y);
+        System.out.println("x=" + x + ",y=" + y);
     }
 
     private void change() {
-        x=3;
-        y=x;
+        x = 3;
+        y = x;
     }
 
 }

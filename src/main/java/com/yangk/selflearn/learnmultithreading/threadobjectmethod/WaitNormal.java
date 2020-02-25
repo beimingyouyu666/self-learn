@@ -16,29 +16,29 @@ public class WaitNormal {
         thread1.start();
     }
 
-    static class Thread0 extends Thread{
+    static class Thread0 extends Thread {
 
         @Override
         public void run() {
             synchronized (WaitNormal.class) {
-                System.out.println(Thread.currentThread().getName()+"启动");
+                System.out.println(Thread.currentThread().getName() + "启动");
                 try {
                     WaitNormal.class.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(Thread.currentThread().getName()+"结束");
+                System.out.println(Thread.currentThread().getName() + "结束");
             }
         }
     }
 
-    static class Thread1 extends Thread{
+    static class Thread1 extends Thread {
         @Override
         public void run() {
             synchronized (WaitNormal.class) {
-                System.out.println(Thread.currentThread().getName()+"启动");
+                System.out.println(Thread.currentThread().getName() + "启动");
                 WaitNormal.class.notify();
-                System.out.println(Thread.currentThread().getName()+"结束");
+                System.out.println(Thread.currentThread().getName() + "结束");
             }
         }
     }

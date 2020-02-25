@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Table(name = "`user`")
 @Data
-public class User{
+public class User {
     /**
      * 主键
      */
@@ -43,7 +43,7 @@ public class User{
     @Column(name = "`username`")
     private String username;
 
-    public User(Integer id,Integer age, String password) {
+    public User(Integer id, Integer age, String password) {
         this.id = id;
         this.age = age;
         this.password = password;

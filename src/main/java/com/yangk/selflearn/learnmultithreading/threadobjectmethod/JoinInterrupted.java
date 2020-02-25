@@ -2,9 +2,9 @@ package com.yangk.selflearn.learnmultithreading.threadobjectmethod;
 
 /**
  * @Description 在join期间被中断的情况
- *  thread1调用join方法，其实是main线程在等待子线程结束，所以中断的是main线程。
- *  main线程中断后，子线程还会执行完毕，这就有问题，
- *  所以在捕获main线程中断异常时，要将中断标志设置给子线程:catch中加上thread1.interrupt();
+ * thread1调用join方法，其实是main线程在等待子线程结束，所以中断的是main线程。
+ * main线程中断后，子线程还会执行完毕，这就有问题，
+ * 所以在捕获main线程中断异常时，要将中断标志设置给子线程:catch中加上thread1.interrupt();
  * @Author yangkun
  * @Date 2020/2/16
  * @Version 1.0

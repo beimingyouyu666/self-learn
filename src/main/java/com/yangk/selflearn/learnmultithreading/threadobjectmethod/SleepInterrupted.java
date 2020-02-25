@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * @Date 2020/2/16
  * @Version 1.0
  */
-public class SleepInterrupted implements Runnable{
+public class SleepInterrupted implements Runnable {
 
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(new SleepInterrupted());

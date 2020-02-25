@@ -38,12 +38,12 @@ public class IdGenerator {
 
     /**
      * 获取一个批次号，形如 2019071015301361000101237
-     *
-
+     * <p>
+     * <p>
      * 数据库使用 char(25) 存储
      *
      * @param tenantId 租户ID，5 位
-     * @param module 业务模块ID，2 位
+     * @param module   业务模块ID，2 位
      * @return 返回批次号
      */
     public synchronized String batchId(int tenantId, int module) {
@@ -88,7 +88,6 @@ public class IdGenerator {
     /**
      * 生成类似：5b9e306a4df4f8c54a39fb0c
      *
-
      * ObjectId 是 MongoDB 数据库的一种唯一 ID 生成策略，
      * 是 UUID version1 的变种，详细介绍可见：服务化框架－分布式 Unique ID 的生成方法一览。
      *

@@ -23,7 +23,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/page/task")
-public class TaskController{
+public class TaskController {
 
     @RequestMapping(value = "/exportTaskList", method = RequestMethod.POST)
     @ResponseBody

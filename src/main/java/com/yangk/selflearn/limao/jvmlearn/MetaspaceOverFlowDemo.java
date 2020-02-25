@@ -8,16 +8,15 @@ import java.lang.reflect.Method;
 
 /**
  * @Description 模拟metaspace内存溢出
- *
+ * <p>
  * jvm参数
  * -XX:MetaspaceSize=10m -XX:MaxMetaspaceSize=10m
- *
+ * <p>
  * 第二次测试 jvm 参数
  * -XX:MetaspaceSize=10M  -XX:MaxMetaspaceSize=10M
  * -XX:+UseParNewGC -XX:+UseConcMarkSweepGC
  * -XX:+PrintGCDetails -Xloggc:gc-metaspaceover.log
  * -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./
- *
  * @Author yangkun
  * @Date 2019/12/12
  * @Version 1.0
@@ -34,23 +33,23 @@ public class MetaspaceOverFlowDemo {
             enhancer.setCallback(new MethodInterceptor() {
                 @Override
                 public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-                    if (method.getName().equals("run")){
+                    if (method.getName().equals("run")) {
                         System.out.println("启动前先检查");
-                        return methodProxy.invokeSuper(o,objects);
-                    }else {
-                        return methodProxy.invokeSuper(o,objects);
+                        return methodProxy.invokeSuper(o, objects);
+                    } else {
+                        return methodProxy.invokeSuper(o, objects);
                     }
                 }
             });
 
             enhancer.create();
-            System.out.println("目前创建了"+(++count)+"个汽车子类");
+            System.out.println("目前创建了" + (++count) + "个汽车子类");
         }
 
     }
 
     static class Car {
-        public void run(){
+        public void run() {
             System.out.println("汽车启动...");
         }
     }

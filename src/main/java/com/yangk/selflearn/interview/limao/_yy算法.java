@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class _yy算法 {
     public static void main(String[] args) {
-        int[] data = new int[]{1,2,3,4,5,6};
+        int[] data = new int[]{1, 2, 3, 4, 5, 6};
         ListNode node = new ListNode(data);
         test(node, 3);
         node = new ListNode(data);
