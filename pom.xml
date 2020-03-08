@@ -167,6 +167,15 @@
             <artifactId>cglib</artifactId>
             <version>3.3.0</version>
         </dependency>
+        <!--动态生成类-->
+
+        <!--guava 工具类-->
+        <dependency>
+            <groupId>org.xbib</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.1</version>
+        </dependency>
+        <!--guava 工具类-->
 
     </dependencies>
 
