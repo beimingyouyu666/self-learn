@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -31,8 +31,8 @@ public class ListSplit {
 //            System.out.println(String.format("row:%s,size:%s,data:%s", ++i, strings.size(), strings));
 //        }
 
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(4, 8, 1,
-                TimeUnit.SECONDS, new ArrayBlockingQueue<>(1000),
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(4, 8, 0,
+                TimeUnit.SECONDS, new LinkedBlockingQueue<>(1000),
                 new ThreadFactoryBuilder().setNameFormat("threadyk-- %s").build());
 
         partition.forEach((list1) -> {
