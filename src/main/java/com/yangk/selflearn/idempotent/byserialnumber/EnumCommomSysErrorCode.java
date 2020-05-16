@@ -1,4 +1,4 @@
-package com.yangk.selflearn.idempotent;
+package com.yangk.selflearn.idempotent.byserialnumber;
 
 import java.util.Arrays;
 import java.util.List;

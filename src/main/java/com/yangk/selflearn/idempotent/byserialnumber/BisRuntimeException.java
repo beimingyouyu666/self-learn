@@ -1,4 +1,6 @@
-package com.yangk.selflearn.idempotent;
+package com.yangk.selflearn.idempotent.byserialnumber;
+
+import java.util.Locale;
 
 /**
  * @Description TODO
@@ -6,16 +8,25 @@ package com.yangk.selflearn.idempotent;
  * @Date 2019/8/2
  * @Version 1.0
  */
-public class SysRuntimeException extends RuntimeException {
-    protected static final long serialVersionUID = -2193150553300043406L;
+public abstract class BisRuntimeException extends RuntimeException {
+    protected static final long serialVersionUID = 746264109957384560L;
     protected String errCode;
     protected String errMsg;
     protected Object obj;
+    protected Locale locale;
 
-    public SysRuntimeException() {
+    public BisRuntimeException() {
     }
 
-    public SysRuntimeException(String message, Throwable cause) {
+    public BisRuntimeException(Throwable cause) {
+        super(cause);
+    }
+
+    public BisRuntimeException(String message) {
+        super(message);
+    }
+
+    public BisRuntimeException(String message, Throwable cause) {
         super(message, cause);
     }
 
@@ -31,6 +42,10 @@ public class SysRuntimeException extends RuntimeException {
         return this.obj;
     }
 
+    public Locale getLocale() {
+        return this.locale;
+    }
+
     public void setErrCode(String errCode) {
         this.errCode = errCode;
     }
@@ -41,5 +56,9 @@ public class SysRuntimeException extends RuntimeException {
 
     public void setObj(Object obj) {
         this.obj = obj;
+    }
+
+    public void setLocale(Locale locale) {
+        this.locale = locale;
     }
 }

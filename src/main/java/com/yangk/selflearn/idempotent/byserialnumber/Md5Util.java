@@ -1,4 +1,4 @@
-package com.yangk.selflearn.idempotent;
+package com.yangk.selflearn.idempotent.byserialnumber;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 

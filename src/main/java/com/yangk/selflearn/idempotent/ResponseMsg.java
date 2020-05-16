@@ -1,6 +1,10 @@
 package com.yangk.selflearn.idempotent;
 
 
+import com.yangk.selflearn.idempotent.byserialnumber.BisRuntimeException;
+import com.yangk.selflearn.idempotent.byserialnumber.SysRuntimeException;
+import com.yangk.selflearn.idempotent.byserialnumber.SystemException;
+
 import java.io.Serializable;
 
 /**

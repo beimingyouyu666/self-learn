@@ -1,4 +1,4 @@
-package com.yangk.selflearn.idempotent;
+package com.yangk.selflearn.idempotent.byserialnumber;
 
 /**
  * @Description TODO
@@ -8,6 +8,7 @@ package com.yangk.selflearn.idempotent;
  */
 
 import com.alibaba.fastjson.JSON;
+import com.yangk.selflearn.idempotent.ResponseMsg;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -35,7 +36,7 @@ public class IdempotentCacheAspect {
     public IdempotentCacheAspect() {
     }
 
-    @Pointcut("@annotation(com.yangk.selflearn.idempotent.IdempotentCache)")
+    @Pointcut("@annotation(com.yangk.selflearn.idempotent.byserialnumber.IdempotentCache)")
     public void idempotentCacheAnnotationPointcut() {
     }
 
