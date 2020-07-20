@@ -8,7 +8,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 /**
- * @Description TODO
+ * @Description
  * Listsner是由Tomcat管理的，Tomcat无法把SpringIOC容器的Bean注入到Listsner，而注入Bean的工作是由Spring负责的。那么解决这个问题呢？
  * 从servletContext中拿到webApplicationContext，然后调用webApplicationContext.getBean("beanName")
  * <p>

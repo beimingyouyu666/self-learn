@@ -37,12 +37,12 @@ public class SpringContextUtil implements ApplicationContextAware {
      * @Description 设置上下文
      * @Author yangkun
      * @Date 2020/1/13
-     * @Param [applicationContext]
+     * @Param [context]
      * @Return
      **/
     @Override
-    public void setApplicationContext(ApplicationContext applicationContext) {
-        applicationContext = applicationContext;
+    public void setApplicationContext(ApplicationContext context) {
+        applicationContext = context;
     }
 
     /**

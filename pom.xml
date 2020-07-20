@@ -105,7 +105,7 @@
         </dependency>
         <!-- mybatis & database  end-->
 
-        <!--雪花算法生成唯一id-->
+        <!-- 工具包 使用到雪花算法生成唯一id-->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-captcha</artifactId>
