@@ -56,7 +56,7 @@
                 pageSize: 100000
             };
             // 发送请求
-            var form = $('<form method="POST" action="' + CHECK.EXPORT_URL + '">');
+            var form = $('<form method="POST" action="' + /page/check/exportCheckJobList + '">');
             $.each(searchCondition, function (k, v) {
                 form.append($('<input type="hidden" name="' + k +
                     '" value="' + v + '">'));
