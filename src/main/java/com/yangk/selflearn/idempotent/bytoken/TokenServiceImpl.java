@@ -4,7 +4,6 @@ import com.yangk.selflearn.idempotent.ResponseMsg;
 import com.yangk.selflearn.idempotent.byserialnumber.BusinessRuntimeException;
 import com.yangk.selflearn.idempotent.byserialnumber.EnumCommomSysErrorCode;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +15,7 @@ import java.util.UUID;
  * @Date 2020/5/12
  * @Version 1.0
  */
-@Service
+//@Service
 public class TokenServiceImpl implements TokenService {
 
     private static final String PREFIX_TOKEN = "idempotent:";

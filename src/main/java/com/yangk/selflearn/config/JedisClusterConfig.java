@@ -2,7 +2,6 @@ package com.yangk.selflearn.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.JedisCluster;
 
@@ -15,7 +14,7 @@ import java.util.Set;
  * @Date 2019/8/2
  * @Version 1.0
  */
-@Configuration
+//@Configuration
 public class JedisClusterConfig {
 
     @Value("${spring.redis.cluster.nodes}")

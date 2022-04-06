@@ -22,6 +22,10 @@ public class ExportController1 {
     @Autowired
     private ExportService1 exportService1;
 
+    /**
+     * http://localhost:8082/exportCtmds/export
+     * @param response
+     */
     @GetMapping("/export")
     public void export(HttpServletResponse response) {
         exportService1.export(response, "商品信息" + new Random().nextInt(1000));

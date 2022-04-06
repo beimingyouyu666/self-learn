@@ -13,7 +13,8 @@ import java.util.List;
 @Data
 public class ExcelResponse {
 
-    private List<ExportContentInfo1> data;
+//    private List<ExportContentInfo1> data;
+    private List<ExportContentInfo2> data;
 
     private boolean success;
 

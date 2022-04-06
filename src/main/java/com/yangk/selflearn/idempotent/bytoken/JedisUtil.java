@@ -12,7 +12,7 @@ import redis.clients.jedis.JedisPool;
  * @Date 2020/5/12
  * @Version 1.0
  */
-@Component
+//@Component
 @Slf4j
 public class JedisUtil {
 

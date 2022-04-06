@@ -3,15 +3,15 @@ package com.yangk.selflearn.ctmds;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
 import org.apache.http.ParseException;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
+import org.apache.http.message.BasicNameValuePair;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -69,21 +69,22 @@ public class ExportService1Impl implements ExportService1 {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
         // 参数
-        StringBuffer params = new StringBuffer();
+//        StringBuffer params = new StringBuffer();
         // http://218.240.145.213:9000/CTMDS/pub/PUB010100.do?method=handle05&_dt=20191111223541
         // 字符数据最好encoding以下;这样一来，某些特殊字符才能传过去(如:某人的名字就是“&”,不encoding的话,传不过去)
-        params.append("pageSize=1000");
-        params.append("&");
-        params.append("curPage=1");
+//        params.append("pageSize=1000");
+//        params.append("&");
+//        params.append("curPage=1");
 
 
         // 创建Get请求
         String url = "http://218.240.145.213:9000/CTMDS/pub/PUB010100" +
                 ".do?method=handle05&_dt=20191111223541&pageSize=1000&curPage=1";
-//        HttpGet httpGet = new HttpGet("http://218.240.145.213:9000/CTMDS/pub/PUB010100
-// .do?method=handle05&_dt=20191111223541" + "?" + params);
+
+        url = "https://beian.cfdi.org.cn/CTMDS/pub/PUB010100.do?method=handle05&_dt=20220406205654";
         System.out.println("url:" + url);
-        HttpGet httpGet = new HttpGet(url);
+//        HttpGet httpGet = new HttpGet(url);
+        HttpPost httpPost = new HttpPost();
         // 响应模型
         CloseableHttpResponse response = null;
         List<ExportDTO> result = new ArrayList<>();
@@ -101,18 +102,34 @@ public class ExportService1Impl implements ExportService1 {
                     .setRedirectsEnabled(true).build();
 
             // 将上面的配置信息 运用到这个Get请求里
-            httpGet.setConfig(requestConfig);
+//            httpGet.setConfig(requestConfig);
+            httpPost.setConfig(requestConfig);
+
+            // 参数
+            // 设置2个post参数
+            List<NameValuePair> parameters = new ArrayList<NameValuePair>(0);
+            parameters.add(new BasicNameValuePair("pageSize", "1300"));
+            parameters.add(new BasicNameValuePair("curPage", "1"));
+            // 构造一个form表单式的实体
+            UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(parameters);
+            // 将请求实体设置到httpPost对象中
+            httpPost.setEntity(formEntity);
 
             // 由客户端执行(发送)Get请求
-            response = httpClient.execute(httpGet);
-
+//            response = httpClient.execute(httpGet);
+//            response = httpClient.execute(httpPost);
             // 从响应模型中获取响应实体
-            HttpEntity responseEntity = response.getEntity();
-            if (responseEntity != null) {
+            HashMap<String, Object> params = new HashMap<>();
+            params.put("pageSize","1300");
+            params.put("curPage","1");
+            String s1 = HttpClientUtil.sendPostByUrlencoded(url, params);
+//            HttpEntity responseEntity = response.getEntity();
+//            if (responseEntity != null) {
                 // 调分页页面查询所有医院
-                String s = EntityUtils.toString(responseEntity);
-                ExcelResponse excelResponse = JSONObject.parseObject(s, ExcelResponse.class);
-                List<ExportContentInfo1> exportContentInfo1s = excelResponse.getData();
+//                String s = EntityUtils.toString(responseEntity);
+                ExcelResponse excelResponse = JSONObject.parseObject(s1, ExcelResponse.class);
+//                List<ExportContentInfo1> exportContentInfo1s = excelResponse.getData();
+                List<ExportContentInfo2> exportContentInfo1s = excelResponse.getData();
 
                 // 查询医院详情
                 Map<String, List<DoctorDTO>> resultMap = new HashMap<>();
@@ -121,35 +138,38 @@ public class ExportService1Impl implements ExportService1 {
 //                test.add(exportContentInfo1s.get(1));
 //                test.add(exportContentInfo1s.get(2));
                 System.out.println("查询到的医院数据" + exportContentInfo1s.size());
-                for (ExportContentInfo1 exportContentInfo1 : exportContentInfo1s) {
+
+
+                for (ExportContentInfo2 exportContentInfo2 : exportContentInfo1s) {
 //                    System.out.println("begin getdetail"+exportContentInfo1.getCompanyId());
-                    getDetail(exportContentInfo1, resultMap);
+                    long requestNo = 1649249813744L;
+                    getDetail(exportContentInfo2, resultMap , requestNo);
                 }
 
                 for (Map.Entry<String, List<DoctorDTO>> entry : resultMap.entrySet()) {
                     List<DoctorDTO> doctorDTOS = entry.getValue();
                     List<DoctorDTO> collect =
-                            doctorDTOS.stream().filter(doctorDTO -> (doctorDTO.getDepartment().contains("呼吸") || doctorDTO.getDepartment().contains("麻醉") || doctorDTO.getDepartment().contains("重症") || doctorDTO.getDepartment().contains("康复"))).collect(Collectors.toList());
+                            doctorDTOS.stream().filter(doctorDTO -> (doctorDTO.getDepartment().contains("超声") )).collect(Collectors.toList());
                     resultMap.put(entry.getKey(), collect);
                 }
 
                 // 转换
 
-                for (ExportContentInfo1 exportContentInfo1 : exportContentInfo1s) {
+                for (ExportContentInfo2 exportContentInfo2 : exportContentInfo1s) {
                     ExportDTO exportDTO = new ExportDTO();
-                    BeanUtils.copyProperties(exportContentInfo1, exportDTO);
+                    BeanUtils.copyProperties(exportContentInfo2, exportDTO);
                     if ("8".equals(exportDTO.getRecordStatus())) {
                         exportDTO.setRecordStatus("已备案");
                     }
                     StringJoiner stringJoiner = new StringJoiner(";");
-                    if (CollectionUtils.isNotEmpty(resultMap.get(exportContentInfo1.getCompanyId()))) {
-                        for (DoctorDTO doctorDTO : resultMap.get(exportContentInfo1.getCompanyId())) {
+                    if (CollectionUtils.isNotEmpty(resultMap.get(exportContentInfo2.getCompanyId()))) {
+                        for (DoctorDTO doctorDTO : resultMap.get(exportContentInfo2.getCompanyId())) {
                             stringJoiner.add(doctorDTO.getDepartment() + "," + doctorDTO.getName() + "," + doctorDTO.getTitle());
                         }
                         exportDTO.setDetail(stringJoiner.toString());
 
                     } else {
-                        notHaveResult.add(exportContentInfo1.getCompanyId() + "=" + exportContentInfo1.getCompName());
+                        notHaveResult.add(exportContentInfo2.getCompanyId() + "=" + exportContentInfo2.getCompName());
                     }
                     result.add(exportDTO);
                 }
@@ -164,10 +184,10 @@ public class ExportService1Impl implements ExportService1 {
                 }
                 System.out.println("notHaveResult is" + notHaveResult);
 
-            }
-        } catch (ClientProtocolException e) {
+//            }
+        } /*catch (ClientProtocolException e) {
             e.printStackTrace();
-        } catch (ParseException e) {
+        } */catch (ParseException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -198,7 +218,56 @@ public class ExportService1Impl implements ExportService1 {
 
     }
 
-    private List<DoctorDTO> getDetail(ExportContentInfo1 exportContentInfo1, Map<String, List<DoctorDTO>> resultMap) {
+    private List<DoctorDTO> getDetail(ExportContentInfo2 exportContentInfo2, Map<String, List<DoctorDTO>> resultMap , long requestNo) {
+
+//        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+
+        StringBuffer params = new StringBuffer();
+        params.append("compId=" + exportContentInfo2.getCompanyId());
+        params.append("&");
+        params.append("_=" + requestNo);
+
+        // 创建Get请求
+//        String url = "http://218.240.145.213:9000/CTMDS/pub/PUB010100.do?method=handle04&" + params.toString();
+        String url = "https://beian.cfdi.org.cn/CTMDS/pub/PUB010100.do?method=handle04&" + params.toString();
+        List<DoctorDTO> doctorDTOS = new ArrayList<>();
+        try {
+            Document document = Jsoup.connect(url).get();
+            Elements tables = document.getElementsByTag("table");
+            Element table = tables.get(0);
+            Elements trs = table.getElementsByTag("tr");
+
+            for (Element tr : trs) {
+                Elements tds = tr.getElementsByTag("td");
+                DoctorDTO doctorDTO = new DoctorDTO();
+                if (tds.size() == 0) {
+                    continue;
+                }
+                for (int i = 0; i < tds.size(); i++) {
+                    String value = tds.get(i).text();
+                    if (i == 0) {
+                        doctorDTO.setDepartment(value);
+                    }
+                    if (i == 1) {
+                        doctorDTO.setName(value);
+                    }
+                    if (i == 2) {
+                        doctorDTO.setTitle(value);
+                    }
+                }
+                doctorDTOS.add(doctorDTO);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        resultMap.put(exportContentInfo2.getCompanyId(), doctorDTOS);
+        return doctorDTOS;
+
+
+    }
+
+
+    private List<DoctorDTO> getDetail1(ExportContentInfo1 exportContentInfo1, Map<String, List<DoctorDTO>> resultMap) {
 
 //        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
@@ -288,15 +357,15 @@ public class ExportService1Impl implements ExportService1 {
                 "\"linkMan\":\"黄砚\",\"address\":\"四川省成都市青羊区日月大道1617号\",\"compName\":\"成都市妇女儿童中心医院\",\"ROW2\":2," +
                 "\"companyId\":\"846EF1E8C0A802331A92B78E9E931A6F\",\"recordStatus\":\"8\"}],\"success\":true," +
                 "\"curPage\":\"1\",\"totalRows\":811}";
-        ExcelResponse excelResponse = JSONObject.parseObject(s, ExcelResponse.class);
-        List<ExportContentInfo1> result = excelResponse.getData();
-        List<ExportDTO> list = new ArrayList<>();
-        for (ExportContentInfo1 exportContentInfo1 : result) {
-            ExportDTO exportDTO = new ExportDTO();
-            BeanUtils.copyProperties(exportContentInfo1, exportDTO);
-            list.add(exportDTO);
-        }
-        return list;
+//        ExcelResponse excelResponse = JSONObject.parseObject(s, ExcelResponse.class);
+//        List<ExportContentInfo1> result = excelResponse.getData();
+//        List<ExportDTO> list = new ArrayList<>();
+//        for (ExportContentInfo1 exportContentInfo1 : result) {
+//            ExportDTO exportDTO = new ExportDTO();
+//            BeanUtils.copyProperties(exportContentInfo1, exportDTO);
+//            list.add(exportDTO);
+//        }
+        return null;
     }
 
 }
