@@ -157,7 +157,7 @@
         <!--一些工具类-->
         <dependency>
             <groupId>com.google.guava</groupId>
-            <version>28.1-jre</version>
+            <version>32.0.0-jre</version>
             <artifactId>guava</artifactId>
         </dependency>
 
